@@ -5,8 +5,10 @@
     background-image:url("images/signupbg.jpg");
 }
 
-.ulnavbar,a {
+.ul-nav-bar,a {
     text-decoration: none;
+    margin: 10px;
+    padding: 5;
 
 }
 button{
@@ -20,10 +22,14 @@ button{
     font-size: 16px;
     
 }
-.ulnavbar {
+.ul-navbar {
     margin-top:auto;
     display: flex;
     justify-content:right;
     align-items: center;
 }
 
+button:hover {
+    background-color: blue;
+
+}
