@@ -12,8 +12,8 @@
 
 }
 button{
-    border-radius: 10px;
-    background-color: #04AA6D; /* Green */
+    border-radius: 15px;
+    background-color:lightblue;
     border-color: black;
     padding: 15px 32px;
     text-align: center;
@@ -22,6 +22,7 @@ button{
     font-size: 16px;
     
 }
+
 .ul-navbar {
     margin-top:auto;
     display: flex;
@@ -29,7 +30,9 @@ button{
     align-items: center;
 }
 
-button:hover {
-    background-color: blue;
-
-}
+.container {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 300px; /* Example height, adjust as needed */
+  }
