@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Side Navbar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Main content */
+        .main-content {
+            transition: margin-left 0.5s;
+            padding: 20px;
+        }
+
+        /* The sidebar */
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #111;
+            padding-top: 60px;
+            transition: left 0.5s;
+            z-index: 1;
+        }
+
+        /* Sidebar links */
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        /* When mouse is over the links */
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Active sidebar */
+        .sidebar.active {
+            left: 0;
+        }
+
+        /* Push content when sidebar is open */
+        .main-content.shifted {
+            margin-left: 250px;
+        }
+
+        /* Toggle button */
+        .toggle-btn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        /* Close button on the sidebar */
+        .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Side navigation -->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Main content -->
+    <div id="main" class="main-content">
+        <button class="toggle-btn" onclick="toggleNav()">&#9776; Menu</button>
+        <h2>Sliding Side Navbar Example</h2>
+        <p>Click on the menu button to toggle the side navigation bar.</p>
+        <p>This is a simple implementation of a sliding sidebar that moves in and out when toggled.</p>
+    </div>
+
+    <script>
+        // Function to toggle the sidebar
+        function toggleNav() {
+            document.getElementById("mySidebar").classList.toggle("active");
+            document.getElementById("main").classList.toggle("shifted");
+        }
+
+        // Function to close the sidebar
+        function closeNav() {
+            document.getElementById("mySidebar").classList.remove("active");
+            document.getElementById("main").classList.remove("shifted");
+        }
+    </script>
+</body>
+</html>
