@@ -33,7 +33,7 @@ button{
 
 .container {
     display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center; /* Vertical centering */
-    height: 300px; /* Example height, adjust as needed */
+    justify-content: center;
+    align-items: center;
+    height: 300px; 
   }
